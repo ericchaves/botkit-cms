@@ -1,5 +1,5 @@
 $spacing-unit:     30px;
-$half-spacing-unit: $spacing-unit / 2;
+$half-spacing-unit: calc($spacing-unit / 2);
 $unit: 5px;
 
 // Colors

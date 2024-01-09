@@ -15,7 +15,7 @@ $selected-bot-background-color: #fff;
     }
     li {
         box-sizing: border-box;
-        padding: 4px $spacing-unit/2;
+        padding: 4px calc($spacing-unit / 2);
         line-height: 30px;
         a {
             display: block;
@@ -61,7 +61,7 @@ $selected-bot-background-color: #fff;
         font-family: $headline-font;
         font-weight: 300;
         font-size: 1.4rem;
-        padding: $unit $unit $unit $spacing-unit /2;
+        padding: $unit $unit $unit calc($spacing-unit / 2);
         cursor: pointer;
         transition: all 0.2s;
         a {
@@ -127,14 +127,14 @@ $selected-bot-background-color: #fff;
     overflow-y: auto;
     overflow-x: hidden;
     ul.bot-options {
-        margin-left: $spacing-unit/2;
+        margin-left: calc($spacing-unit / 2);
         background-color: lighten($lavender-light, 10%);
         h5.selected {
             background-color: $lavender-light;
         }
     }
     .selected-bot {
-        padding: $spacing-unit /2;
+        padding: calc($spacing-unit /2);
         background-color: $selected-bot-background-color;
         .breadcrumbsbar {
             font-size: 16px;

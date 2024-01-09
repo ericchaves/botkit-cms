@@ -2,7 +2,7 @@ $inspector-cell-width: 18em;
 $inspector-background-color: #fff;
 
 @mixin inspector-block {
-    padding: $unit $spacing-unit/2 $unit $spacing-unit/2;
+    padding: $unit calc($spacing-unit/2) $unit calc($spacing-unit/2);
 
     &:empty {
         padding: 0;
@@ -92,7 +92,7 @@ $inspector-background-color: #fff;
         display: block;
     }
     .inspector-title {
-        padding: $spacing-unit /2;
+        padding: calc($spacing-unit /2);
         background-color: $lavender-light;
         font-family: $headline-font;
         font-weight: bold;

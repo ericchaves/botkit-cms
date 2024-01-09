@@ -12,21 +12,22 @@
 // -----------------------------------------------------------/
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
-    sass = require('gulp-sass'),
-    gutil = require('gulp-util'),
+    sass = require('gulp-sass')(require('sass')),
+    colors = require('ansi-colors'),
     package = require('./package.json');
 
 var banner = function() {
-    return '/*! ' + package.name + ' - v' + package.version + ' - ' + gutil.date(new Date(), "yyyy-mm-dd") +
+    const today = new Date();
+    return '/*! ' + package.name + ' - v' + package.version + ' - ' + today.toISOString().slice(0,10) +
         ' [copyright: ' + package.copyright + ']' + ' */';
 };
 
 function logData() {
-    gutil.log(
-        gutil.colors.bgGreen(
-            gutil.colors.white(
-                gutil.colors.bold(
-                    gutil.colors.white.apply(this, arguments)
+    console.log(
+        colors.bgGreen(
+            colors.white(
+                colors.bold(
+                    colors.white(...arguments)
                 )
             )
         )
@@ -34,10 +35,10 @@ function logData() {
 }
 
 function ready() {
-    gutil.log(
-        gutil.colors.bgMagenta(
-            gutil.colors.white(
-                gutil.colors.bold('[          STATUS: READY          ]')
+    console.log(
+        colors.bgMagenta(
+            colors.white(
+                colors.bold('[          STATUS: READY          ]')
             )
         )
     );
