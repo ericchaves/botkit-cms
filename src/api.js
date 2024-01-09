@@ -1,4 +1,4 @@
-var request = require('request');
+var request = require('axios');
 var fs = require('fs');
 
 const INTENT_CONFIDENCE_THRESHOLD = process.env.INTENT_CONFIDENCE_THRESHOLD || 0.7;
