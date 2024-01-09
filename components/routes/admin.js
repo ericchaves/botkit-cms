@@ -1,5 +1,5 @@
 
-const uuidv4 = require('uuid/v4');
+const uuidv4 = require('crypto').randomUUID;
 const request = require('axios');
 const async = require('async');
 

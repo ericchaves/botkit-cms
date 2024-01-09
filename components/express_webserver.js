@@ -1,6 +1,5 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var querystring = require('querystring');
 var hbs = require('express-hbs');
 var basicAuth = require('express-basic-auth')
 
